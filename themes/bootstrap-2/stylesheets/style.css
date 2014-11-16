@@ -1,10 +1,20 @@
 body {
-  background: #edece3;
+  background: #5d9cec;
 }
 
 /* Page header classes */
 .navbar {
   border-radius: 0;
+}
+
+.sitename {
+  text-align: center;
+}
+
+.sitename a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
 }
 
 #logo {
@@ -52,9 +62,7 @@ body {
     border-radius: 6px;
     line-height: 1;
     padding: 4px;
-    display: block;
     max-width: 100%;
-    height: auto;
 }
 
 .status {
