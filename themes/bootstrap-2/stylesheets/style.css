@@ -1,5 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+
 body {
-  background: #5d9cec;
+  background: white;
+  position: relative;
 }
 
 /* Page header classes */
@@ -84,4 +87,162 @@ body {
 
 #sidebar {
   padding-top: 24px;
+}
+
+.erebor {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+}
+
+.kaushan {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.ground {
+  height: 233px;
+  width: 100%;
+  background-color: #754802;
+  z-index: 1;
+  display: inline;
+  position: absolute;
+  top: 432px;
+  left: 0;
+  }
+
+#sky {
+  height: 433px;
+  width: 100%;
+  z-index: 1;
+  display: inline;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+
+#sun {
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px; 
+    display: inline;
+    position: absolute;
+    background-color: #ffce54;
+    z-index: 1;
+}
+
+.mountain {
+  max-width: 574px;
+  width: 100%;
+}
+
+.name {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 60px;
+  color: white;
+  margin-top: -220px;
+  margin-left: 75px;
+}
+
+.job-desc {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 25px;
+  color: white;
+  margin-left: 90px;
+}
+
+.buttons {
+  margin-left: 80px;
+  margin-top: 12px;
+}
+
+.btn.contact {
+  background-color: #f6bb42;
+  color: white;
+}
+
+.btn.resume {
+  background-color: #da4453;
+  color: white;
+}
+
+.btn.projects{
+  background-color: #8cc152;
+  color: white;
+}
+
+.blog {
+  margin-top: 20px;
+}
+
+.project {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline;
+}
+
+.desc {
+  padding-left: 10%;
+  padding-right: 10%; 
+}
+
+@media only screen and (max-device-width: 700px) {
+  .ground {
+    top: 300px;
+    height: 187px;
+  }
+  #sun {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px; 
+  }
+  .name {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 47px;
+  color: white;
+  margin-top: -123px;
+  margin-left: 69px;
+}
+
+.erebor {
+  width: 100%;
+  padding: 0px;
+}
+
+.job-desc {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 15px;
+  color: white;
+  margin-left: 69px;
+}
+.kaushan{
+    margin-bottom: 55px;
+    font-size: 22px;
+
+  }
+.buttons {
+  margin-top: 15px;
+  margin-left: 0px;
+  width: 100%;
+  padding: 0px;
+}
+.btn.contact {
+  width: 100%;
+}
+
+.btn.resume {
+  width: 100%;
+}
+
+.btn.projects{
+  width: 100%;
+}
 }
