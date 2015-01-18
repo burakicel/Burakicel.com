@@ -86,6 +86,8 @@ group :development, :test do
   gem 'better_errors', '~> 2.0.0'
   gem 'binding_of_caller'
   gem 'guard-rspec'
+  gem 'taps'
+  gem 'rvm'
 end
 
 # Install gems from each theme
