@@ -1,0 +1,39 @@
+<div class="row">
+	<div class="col-md-12 follow">
+		Why don't you follow me? </br>
+		<a class="btn btn-social-icon btn-twitter">
+			<i class="fa fa-twitter fa-4x"></i>
+		</a>
+		<a class="btn btn-social-icon btn-github">
+			<i class="fa fa-github fa-4x"></i>
+		</a>
+		<a class="btn btn-social-icon btn-facebook">
+			<i class="fa fa-facebook fa-4x"></i>
+		</a>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 projects">
+			Personal Projects</br>
+		</div>
+
+		<!-- This is for each post -->
+		<%- Page.published.each do |page| %>
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<%= "<img class='project' src='../../images/theme/#{page.title}.jpg' />" %>
+				<div class="caption">
+					<h3><%=page.title%></h3>
+					<p><%= page.body[0..20]+"..."%></p>
+					<p><%= link_to_permalink(page, "Learn More") %></p>
+				</div>
+			</div>
+		</div>
+		<%- end %>
+
+
+
+	</div>
+</div>

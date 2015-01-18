@@ -1,164 +1,54 @@
-@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+/* NEW WEB PAGE*/
 
 body {
-  background: white;
-  position: relative;
+  overflow-x: hidden;
 }
 
-/* Page header classes */
-.navbar {
-  border-radius: 0;
-}
-
-.sitename {
+.container-fluid {
   text-align: center;
+  padding: 0px 0px 0px 0px !important;
+  margin: 0px;
+  overflow: hidden;
+  background-color: #f1f2f6;
 }
 
-.sitename a {
-  color: white;
-  text-decoration: none;
-  font-family: 'Lato', sans-serif;
+.slider-image {
+  margin-bottom: 20px;
+  width: 300px;
 }
 
-#logo {
-  margin-top: 60px;
-  height: 300px;
-  background-image: url('../../images/theme/header.jpg');
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.vertical-container {
-  display: table;
-}
-
-.vertical {
-  display: table-cell;
-  vertical-align: middle;
-  height: 300px;
+.slider-carousel{
   text-align: center;
+  margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
 }
 
-.vertical a {
-  color: #fff;
-  font-weight: bold;
-}
-
-.subtitle {
-  color: #999;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-/* Main page classes */
-#page {
-  background: #fff;
+.introduction {
+  padding-top: 20px;
   padding-bottom: 20px;
-}
-
-#page img {
-    background: #ddd;
-    border: 1px solid #DDDDDD;
-    border-radius: 6px;
-    line-height: 1;
-    padding: 4px;
-    max-width: 100%;
-}
-
-.status {
-  margin-top: 30px;
-}
-
-#page .gravatar {
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-#commentList {
-  padding-left: 0;
-}
-
-#commentList li .content {
-  margin-left: 76px;
-}
-
-#sidebar {
-  padding-top: 24px;
-}
-
-.erebor {
-  width: 100%;
   text-align: center;
-  z-index: 1;
-  position: absolute;
-}
-
-.kaushan {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 20px;
+  background-color: #154e8c;
+  font-family: 'Roboto', sans-serif;
   color: white;
-  margin-bottom: 50px;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
-.ground {
-  height: 233px;
-  width: 100%;
-  background-color: #754802;
-  z-index: 1;
-  display: inline;
-  position: absolute;
-  top: 432px;
-  left: 0;
-  }
 
-#sky {
-  height: 433px;
-  width: 100%;
-  z-index: 1;
-  display: inline;
-  position: absolute;
-  top: 0px;
-  left: 0;
-}
-
-#sun {
-    width: 120px;
-    height: 120px;
-    -webkit-border-radius: 60px;
-    -moz-border-radius: 60px;
-    border-radius: 60px; 
-    display: inline;
-    position: absolute;
-    background-color: #ffce54;
-    z-index: 1;
-}
-
-.mountain {
-  max-width: 574px;
-  width: 100%;
-}
-
-.name {
-  font-family: 'Kaushan Script', cursive;
+.burakicel {
+  margin-top: 0px;
   font-size: 60px;
-  color: white;
-  margin-top: -220px;
-  margin-left: 75px;
 }
 
-.job-desc {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 25px;
-  color: white;
-  margin-left: 90px;
-}
-
-.buttons {
-  margin-left: 80px;
-  margin-top: 12px;
+.inner-item {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    img {
+        margin: 0 auto;
+    }
 }
 
 .btn.contact {
@@ -171,78 +61,37 @@ body {
   color: white;
 }
 
-.btn.projects{
+.btn.project{
   background-color: #8cc152;
   color: white;
 }
 
-.blog {
+.buttons {
   margin-top: 20px;
 }
 
-.project {
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  display: inline;
+.follow, .projects {
+  margin-top: 30px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
 }
 
-.desc {
-  padding-left: 10%;
-  padding-right: 10%; 
+.project-content {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  color: black;
 }
 
-@media only screen and (max-device-width: 700px) {
-  .ground {
-    top: 300px;
-    height: 187px;
-  }
-  #sun {
-    width: 60px;
-    height: 60px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px; 
-  }
-  .name {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 47px;
-  color: white;
-  margin-top: -123px;
-  margin-left: 69px;
+
+.thumbnail {
+  font-family: 'Roboto', sans-serif;
 }
 
-.erebor {
-  width: 100%;
-  padding: 0px;
+.btn-primary {
+  color: white !important;
 }
 
-.job-desc {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 15px;
-  color: white;
-  margin-left: 69px;
-}
-.kaushan{
-    margin-bottom: 55px;
-    font-size: 22px;
-
-  }
-.buttons {
-  margin-top: 15px;
-  margin-left: 0px;
-  width: 100%;
-  padding: 0px;
-}
-.btn.contact {
-  width: 100%;
-}
-
-.btn.resume {
-  width: 100%;
-}
-
-.btn.projects{
-  width: 100%;
-}
+.desc, .blog {
+  font-family: 'Roboto', sans-serif;
 }

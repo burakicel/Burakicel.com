@@ -3,77 +3,42 @@
 <head profile="http://gmpg.org/xfn/11">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Burak Icel</title>
-  <%= stylesheet_link_tag "/stylesheets/theme/bootstrap.css", "/stylesheets/theme/style.css", "/stylesheets/user-style.css", :media => 'all' %>
-  <%= render 'shared/page_header' %>
   <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag "/stylesheets/theme/bootstrap.css", "/stylesheets/theme/style.css", "/stylesheets/theme/user-style.css",
+  "/stylesheets/theme/animate.css", :media => 'all' %>
+  <%= render 'shared/page_header' %>
 </head>
 <body>
-  <div id="sky"></div>
-  <div id="sun"></div>
-  <div class="ground"></div>
-  <div class="erebor col-sm-12">
-    <div id="clouds">
-  <div class="cloud x1"></div>
-  <!-- Time for multiple clouds to dance around -->
-  <div class="cloud x2"></div>
-  <div class="cloud x3"></div>
-  <div class="cloud x4"></div>
-  <div class="cloud x5"></div>
-</div>
-    <div class="kaushan">In a hole in the ground there lived a hobbit.</div>
-    <img class="mountain" alt="Icon" src='../../images/theme/bg_il.png' />
-    <div class="name">Burak Icel</div>
-    <div class="job-desc">Full Stack Web Developer
-    </br>University of Waterloo CS 2019</div>
-    <div class="buttons">
-      <button type="button" class="btn btn-default contact">Contact</button>
-      <button type="button" class="btn btn-default resume">Resume</button>
-      <button type="button" class="btn btn-default projects">Projects</button>
-    </div>
-    <% if params[:action] == "view_page" %>
-      <%= yield %>
-      <p style='text-align: center'><small>Powered by <a href='http://publify.co'>Publify</a> | Photo <a href='http://startupstockphotos.com/'>Startup stock photos</a>
-      </small></p>
-    <%else %>
-        <%= render 'shared/custom' %>
-    <% end %>
+
+  <!-- Slider and Header -->
+  <div class="container-fluid">
+    <%= render 'shared/header' %>
   </div>
 
-    
 
-  <script type="text/javascript">
-    var skyColor = -150;
-    var skyRateChange = 1;
-    var sunx = 0;
-    var suny = 400;
+  <% if params[:action] == "view_page" %>
+    <!-- Index Page -->
+    <div class="container desc">
+      <%= yield %>
 
-    function skyTime () {
-      document.getElementById("sky").style.backgroundColor = "rgb("+Math.max(0,(skyColor+93)).toString()+","+Math.max(0,(skyColor+156)).toString()+","+Math.max(0,(skyColor+236)).toString()+")";
+  <%else %>
+    <!-- Project Description -->
+    <div class="container-fluid">
+     <%= render 'shared/main_content' %>
+     <div class="row blog">
+       <%= yield %>
+     </div>
+  <% end %>
 
-      document.getElementById("sun").style.left = sunx.toString()+"%";
-      document.getElementById("sun").style.top = suny.toString()+"px";
+  <!--Footer -->
+  <p style='text-align: center'><small>Powered by <a href='http://publify.co'>Publify</a> | Photo <a href='http://startupstockphotos.com/'>Startup stock photos</a>
+  </small></p>
 
-      if (skyColor == 19){
-        skyRateChange = -1;
-      }
-      else if (skyColor == -236) {
-        skyRateChange = 1;
-      }
+   </div>
 
-      if (skyColor < -200){
-        sunx =0;
-        suny = 500;
-      }
-
-      suny -= skyRateChange*1.9;
-      sunx += 0.1*(screen.width/1000);
-      skyColor += skyRateChange;
-      setTimeout(function(){skyTime()}, 50);
-    }
-    skyTime();
-
-
-    
-  </script>
-</body>
-</html>
+ </body>
+ </html>
